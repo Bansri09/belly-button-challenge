@@ -1,50 +1,30 @@
-# belly-button-challenge
+# Belly Button Biodiversity Dashboard
 
-Build an interactive dashboard to explore the Belly Button Biodiversity datasetLinks to an external site., which catalogs the microbes that colonize human navels.
+This project involves building an interactive dashboard to explore the Belly Button Biodiversity dataset, which catalogs the microbes that colonize human navels. The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs) were present in more than 70% of people, while the rest were relatively rare.
 
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
+## Overview
 
-Instructions
-Complete the following steps:
+The interactive dashboard allows users to visualize the top 10 OTUs found in an individual's navel and explore various aspects of the dataset through bar and bubble charts. Additionally, users can view metadata information about the individuals.
 
-Use the D3 library to read in samples.json from the URL https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json.
+## Features
 
-Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+- **Horizontal Bar Chart**: Displays the top 10 OTUs found in an individual with sample values as the values for the bar chart, otu_ids as the labels, and otu_labels as the hovertext.
+![hw01](https://github.com/user-attachments/assets/3089fb4e-07b5-4ea2-96ef-38c45a732fbe)
 
-Use sample_values as the values for the bar chart.
+- **Bubble Chart**: Visualizes each sample with otu_ids for the x values, sample_values for the y values and marker size, and otu_labels for the text values.
+![bubble_chart](https://github.com/user-attachments/assets/4f5bc402-55a2-4b2e-921f-a814d79be0dd)
 
-Use otu_ids as the labels for the bar chart.
+- **Demographic Info Panel**: Displays an individual's demographic information by looping through key-value pairs from the metadata JSON object.
+![hw03](https://github.com/user-attachments/assets/faba1587-e36b-42b8-89b2-2e721afa773b)
 
-Use otu_labels as the hovertext for the chart.
+- **Dynamic Updates**: Updates all plots when a new sample is selected from the dropdown menu.
+![hw02](https://github.com/user-attachments/assets/0de77f45-3777-4dee-af55-92e37a85cb0a)
 
-bar Chart
 
-Create a bubble chart that displays each sample.
+## Technologies Used
 
-Use otu_ids for the x values.
+- D3.js
+- Plotly.js
+- HTML/CSS
+- JavaScript
 
-Use sample_values for the y values.
-
-Use sample_values for the marker size.
-
-Use otu_ids for the marker colors.
-
-Use otu_labels for the text values.
-
-Bubble Chart
-
-Display the sample's metadata, i.e., an individual's demographic information.
-
-Loop through each key-value pair from the metadata JSON object and create a text string.
-
-Append an html tag with that text to the #sample-metadata panel.
-
-hw
-
-Update all the plots when a new sample is selected. Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown as follows:
-
-hw
-
-Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo. Ensure that your repository has regular commits and a thorough README.md file
-
-Note: If you haven't covered GitHub Pages yet in class (as this will be introduced in Class 15.3), don't worry! As long as the finalized code is in your GitHub repository, deploying it can be done in just a few clicks. Focus on completing your app and making regular commits for now. We'll walk through the easy deployment process together in class.
